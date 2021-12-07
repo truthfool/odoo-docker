@@ -13,7 +13,6 @@ services:
       - HOST=openg2p
       - USER=openg2p
       - PASSWORD=openg2p
-    command: /bin/sh -c "./requirements-script.sh"
   openg2p:
     image: postgres:13
     environment:
