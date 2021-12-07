@@ -42,7 +42,8 @@ phonenumbers==8.12.28
 Pillow==6.1.0
 polib==1.1.0
 psutil==4.3.1
-psycopg2==2.8.3
+# libpq-dev==9.0.0
+# psycopg2==2.8.3
 pycparser==2.20
 pydot==1.2.3
 pyldap==2.4.28
@@ -62,9 +63,9 @@ reportlab==3.3.0
 requests==2.20.0
 s3transfer==0.4.2
 six==1.16.0
-soupsieve==2.2.1
+soupsieve==2.1
 suds-jurko==0.6
-tomli==1.1.0
+# tomli==1.1.0
 urllib3==1.22
 vatnumber==1.2
 vobject==0.9.3
