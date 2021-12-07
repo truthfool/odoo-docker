@@ -1,0 +1,28 @@
+version: '3.1'
+services:
+  web:
+    image: odoo:12.0
+    depends_on:
+      - openg2p
+    ports:
+      - "8069:8069"
+    volumes:
+      - odoo-web-data:/var/lib/odoo
+      - ./addons:/mnt/extra-addons
+    environment:
+      - HOST=openg2p
+      - USER=openg2p
+      - PASSWORD=openg2p
+    command: /bin/sh -c "./requirements-script.sh"
+  openg2p:
+    image: postgres:13
+    environment:
+      - POSTGRES_DB=openg2p
+      - POSTGRES_PASSWORD=openg2p
+      - POSTGRES_USER=openg2p
+      - PGDATA=/var/lib/postgresql/data/pgdata
+    volumes:
+      - odoo-db-data:/var/lib/postgresql/data/pgdata
+volumes:
+  odoo-web-data:
+  odoo-db-data:
